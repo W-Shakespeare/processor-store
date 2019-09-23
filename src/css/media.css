@@ -1,0 +1,777 @@
+@media (max-width: 1324px) {
+  .content {
+    margin-left: 50px;
+  }
+  .oneProcessor {
+    width: 250px;
+  }
+}
+@media (max-width: 1300px) {
+  .content {
+    margin-left: 40px;
+  }
+}
+@media (max-width: 1260px) {
+  .content {
+    margin-left: 10px;
+  }
+  .oneProcessor {
+    width: 250px;
+  }
+}
+@media (max-width: 1215px) {
+  .content {
+    margin-left: 100px;
+  }
+  .oneProcessor-all {
+    width: 898px;
+  }
+  .oneProcessor {
+    margin: 20px 45px;
+    width: 280px;
+  }
+}
+@media (max-width: 1170px) {
+  .content {
+    margin-left: 80px;
+  }
+  .oneProcessor-all {
+    width: 898px;
+  }
+  .oneProcessor {
+    margin: 20px 40px;
+    width: 280px;
+  }
+}
+
+@media (max-width: 1135px) {
+  .content {
+    margin-left: 60px;
+  }
+  .oneProcessor-all {
+    width: 898px;
+  }
+  .oneProcessor {
+    margin: 20px 35px;
+    width: 280px;
+  }
+  .search {
+    margin-left: 54%;
+  }
+  .content-switch {
+    max-width: 300px;
+  }
+  .right-div-column-select {
+    width: 300px !important;
+  }
+}
+@media (max-width: 1057px) {
+  .content {
+    margin-left: 40px;
+  }
+  .oneProcessor {
+    margin: 20px 30px;
+    width: 280px;
+  }
+  .search {
+    margin-left: 52%;
+  }
+}
+@media (max-width: 1024px) {
+  .content {
+    margin-left: 20px;
+  }
+  .oneProcessor-all {
+    width: 647px;
+  }
+  .oneProcessor {
+    margin: 20px 25px;
+    width: 280px;
+  }
+  .search {
+    margin-left: 52%;
+  }
+  .content-switch {
+    max-width: 300px;
+  }
+  .right-div-column-select {
+    width: 300px !important;
+  }
+}
+
+@media (max-width: 984px) {
+  .content {
+    margin-left: 10px;
+  }
+  .oneProcessor {
+    margin: 20px 20px;
+  }
+  .search {
+    margin-left: 52%;
+  }
+  .content-switch {
+    max-width: 280px;
+  }
+  .right-div-column-select {
+    width: 280px !important;
+  }
+}
+@media (max-width: 940px) {
+  header {
+    background: none;
+  }
+  .content {
+    margin-left: 10px;
+  }
+  .oneProcessor-all {
+    width: 620px;
+  }
+  .oneProcessor {
+    margin: 20px 5px;
+    width: 280px;
+  }
+  .search {
+    margin-left: 52%;
+  }
+  .inp {
+    width: 300px;
+  }
+  .content-switch {
+    max-width: 280px;
+  }
+  .right-div-column-select {
+    width: 280px !important;
+  }
+}
+
+@media (max-width: 895px) {
+  .content {
+    margin-left: 80px;
+  }
+  .oneProcessor-all {
+    width: 365px;
+  }
+  .oneProcessor {
+    margin: 20px 20px;
+    width: 280px;
+  }
+  .search {
+    margin-left: 52%;
+  }
+  .inp {
+    width: 300px;
+  }
+  .content-switch {
+    max-width: 320px;
+  }
+  .oneProcessor-body {
+    width: 305px;
+  }
+  .content-switch {
+    margin-left: 50px;
+  }
+  .right-div-column-select {
+    width: 320px !important;
+  }
+}
+@media (max-width: 800px) {
+  .content {
+    margin-left: 60px;
+  }
+  .oneProcessor-all {
+    width: 365px;
+  }
+  .oneProcessor {
+    margin: 20px 20px;
+    width: 280px;
+  }
+  .search {
+    margin-left: 52%;
+  }
+  .inp {
+    width: 300px;
+  }
+  .content-switch {
+    max-width: 320px;
+  }
+  .oneProcessor-body {
+    width: 305px;
+  }
+  .content-switch {
+    margin-left: 40px;
+  }
+  .right-div-column-select {
+    width: 320px !important;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    min-height: 500px;
+  }
+  .other {
+    margin-top: 500px;
+  }
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .filters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+  }
+  .oneProcessor-all {
+    width: 640px;
+  }
+  .oneProcessor {
+    margin: 20px 20px;
+    width: 280px;
+  }
+  .search {
+    margin-left: 52%;
+  }
+  .inp {
+    width: 230px;
+  }
+
+  .switch {
+    width: 600px;
+  }
+  .oneProcessor-body {
+    width: 305px;
+  }
+  .content-switch {
+    max-width: inherit;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .manufactotALL {
+    display: none;
+  }
+  #check-manufactor:checked + .manufactotALL {
+    display: block;
+  }
+  .processorFamilyAll {
+    display: none;
+  }
+  #check-processorFamily {
+    display: none;
+  }
+  #check-processorFamily:checked + .processorFamilyAll {
+    display: block;
+  }
+  .numberOfCoresAll {
+    display: none;
+  }
+  #check-numberOfCores {
+    display: none;
+  }
+  #check-numberOfCores:checked + .numberOfCoresAll {
+    display: block;
+  }
+
+  .right-div-column-select {
+    margin: 50px 23%;
+    width: 320px !important;
+  }
+}
+@media (max-width: 642px) {
+  .logo-content-bottom {
+    margin-left: -36px;
+  }
+  .other {
+    flex-direction: column-reverse;
+  }
+  nav {
+    padding-left: 0px;
+  }
+  .search {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 10%;
+    position: relative;
+  }
+  .search-label {
+    top: 16px;
+    left: 48px;
+  }
+  .inp {
+    width: 80%;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .filters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+  }
+
+  .oneProcessor-all {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .oneProcessor {
+    margin: 20px 15px;
+    width: 260px;
+  }
+
+  .switch {
+    width: 550px;
+  }
+  .oneProcessor-body {
+    width: 280px;
+  }
+  .content-switch {
+    max-width: inherit;
+    margin-left: 0px;
+  }
+  .manufactotALL {
+    display: none;
+  }
+  #check-manufactor:checked + .manufactotALL {
+    display: block;
+  }
+  .processorFamilyAll {
+    display: none;
+  }
+  #check-processorFamily {
+    display: none;
+  }
+  #check-processorFamily:checked + .processorFamilyAll {
+    display: block;
+  }
+  .numberOfCoresAll {
+    display: none;
+  }
+  #check-numberOfCores {
+    display: none;
+  }
+  #check-numberOfCores:checked + .numberOfCoresAll {
+    display: block;
+  }
+
+  .right-div-column-select {
+    /* margin: 50px 23%; */
+    width: 320px !important;
+  }
+}
+
+@media (max-width: 588px) {
+  .logo-content-bottom {
+    margin-left: -36px;
+  }
+  .other {
+    flex-direction: column-reverse;
+  }
+  nav {
+    padding-left: 0px;
+  }
+  .search {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 13%;
+    position: relative;
+  }
+  .search-label {
+    top: 16px;
+    left: 48px;
+  }
+  .inp {
+    width: 80%;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .filters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+  }
+
+  .oneProcessor-all {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .oneProcessor {
+    margin: 20px 10px;
+    width: 240px;
+  }
+
+  .switch {
+    width: 500px;
+  }
+  .oneProcessor-body {
+    width: 260px;
+  }
+  .content-switch {
+    max-width: inherit;
+    margin-left: 0px;
+  }
+  .manufactotALL {
+    display: none;
+  }
+  #check-manufactor:checked + .manufactotALL {
+    display: block;
+  }
+  .processorFamilyAll {
+    display: none;
+  }
+  #check-processorFamily {
+    display: none;
+  }
+  #check-processorFamily:checked + .processorFamilyAll {
+    display: block;
+  }
+  .numberOfCoresAll {
+    display: none;
+  }
+  #check-numberOfCores {
+    display: none;
+  }
+  #check-numberOfCores:checked + .numberOfCoresAll {
+    display: block;
+  }
+
+  .right-div-column-select {
+    margin: 50px 23%;
+    width: 320px !important;
+  }
+}
+@media (max-width: 522px) {
+  header {
+    min-height: 300px;
+  }
+  .logo-content-top {
+    margin-left: 20px;
+    font-size: 40px;
+  }
+  .logo-content-bottom {
+    font-size: 15px;
+    margin-left: -26px;
+  }
+  .other {
+    margin-top: 300px;
+    flex-direction: column-reverse;
+  }
+  nav {
+    padding-left: 0px;
+  }
+  .search {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 14%;
+    position: relative;
+  }
+  .search-label {
+    top: 16px;
+    left: 48px;
+  }
+  .inp {
+    width: 80%;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .filters {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+  }
+
+  .oneProcessor-all {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .oneProcessor {
+    margin: 20px 5px;
+    width: 220px;
+  }
+
+  .switch {
+    width: 450px;
+  }
+  .oneProcessor-body {
+    width: 220px;
+  }
+  .content-switch {
+    max-width: inherit;
+    margin-left: 0px;
+  }
+  .manufactotALL {
+    display: none;
+  }
+  #check-manufactor:checked + .manufactotALL {
+    display: block;
+  }
+  .processorFamilyAll {
+    display: none;
+  }
+  #check-processorFamily {
+    display: none;
+  }
+  #check-processorFamily:checked + .processorFamilyAll {
+    display: block;
+  }
+  .numberOfCoresAll {
+    display: none;
+  }
+  #check-numberOfCores {
+    display: none;
+  }
+  #check-numberOfCores:checked + .numberOfCoresAll {
+    display: block;
+  }
+
+  .right-div-column-select {
+    margin: 50px 23%;
+    width: 320px !important;
+  }
+}
+
+@media (max-width: 465px) {
+  header {
+    min-height: 300px;
+  }
+  .logo-content-top {
+    margin-left: 25px;
+    font-size: 32px;
+  }
+  .logo-content-bottom {
+    font-size: 12px;
+    margin-left: -20px;
+  }
+  .other {
+    margin-top: 300px;
+    flex-direction: column-reverse;
+  }
+  nav {
+    padding-left: 0px;
+  }
+  .menu-string {
+    padding-left: 0px;
+  }
+  .search {
+    display: flex;
+    justify-content: center;
+    width: 92%;
+    margin-left: 15%;
+    position: relative;
+  }
+  .search-label {
+    top: 16px;
+    left: 48px;
+  }
+  .inp {
+    width: 80%;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+  }
+
+  .oneProcessor-all {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .oneProcessor {
+    margin: 20px 10px;
+    width: 300px;
+  }
+
+  .switch {
+    width: 400px;
+  }
+  .oneProcessor-body {
+    width: 320px;
+  }
+  .right-div-column-select {
+    margin: 50px 11%;
+    width: 320px !important;
+  }
+}
+
+@media (max-width: 412px) {
+  header {
+    min-height: 200px;
+  }
+  .logo-content-top {
+    margin-left: 35px;
+    font-size: 25px;
+  }
+  .logo-content-bottom {
+    font-size: 10px;
+    margin-left: -20px;
+  }
+  .other {
+    margin-top: 200px;
+    flex-direction: column-reverse;
+  }
+  nav {
+    padding-left: 0px;
+  }
+  .menu-string {
+    padding-left: 0px;
+  }
+  .search {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 19%;
+    position: relative;
+  }
+  .search-label {
+    top: 16px;
+    left: 48px;
+  }
+  .inp {
+    width: 80%;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+  }
+
+  .oneProcessor-all {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .oneProcessor {
+    margin: 20px 10px;
+    width: 300px;
+  }
+
+  .switch {
+    width: 350px;
+  }
+  .oneProcessor-body {
+    width: 320px;
+  }
+  .right-div-column-select {
+    margin: 50px 6%;
+    width: 320px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  header {
+    min-height: 180px;
+  }
+  .logo-content-top {
+    margin-left: 50px;
+    font-size: 25px;
+  }
+  .logo-content-bottom {
+    font-size: 10px;
+    margin-left: -10px;
+    letter-spacing: 10px;
+  }
+  .other {
+    margin-top: 180px;
+    flex-direction: column-reverse;
+  }
+  nav {
+    padding-left: 0px;
+  }
+  .menu-string {
+    padding-left: 0px;
+  }
+  .search {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 21%;
+    position: relative;
+  }
+  .search-label {
+    top: 16px;
+    left: 48px;
+  }
+  .inp {
+    width: 80%;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+  }
+
+  .oneProcessor-all {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .oneProcessor {
+    margin: 20px 10px;
+    width: 300px;
+  }
+
+  .switch {
+    width: 300px;
+  }
+  .oneProcessor-body {
+    width: 320px;
+  }
+  .right-div-column-select {
+    margin: 50px 6%;
+    width: 320px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .search {
+    margin-left: 24%;
+  }
+  .right-div-column-select {
+    width: 300px !important;
+  }
+}

@@ -1,0 +1,141 @@
+main {
+  display: flex;
+}
+
+.content {
+  display: flex;
+}
+body {
+  font-family: "Poppins", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+
+.content-switch {
+  margin-left: 10px;
+  max-width: 340px;
+}
+
+#check-manufactor {
+  display: none;
+}
+
+.switch {
+  margin-top: 20px;
+  background: #222222;
+}
+
+.switch-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #222222;
+  color: #b6b6b6;
+  border-bottom: 3px solid #3389c2;
+  border-top: 3px solid #3389c2;
+}
+
+.switch-item p {
+  font-weight: 700 !important;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  /* padding: 10px 0; */
+}
+
+.div-oth {
+  width: 250px !important;
+  padding: 5px 30px 15px 30px !important;
+  grid-area: column-div-inp-oth;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.inp-m {
+  display: none;
+}
+
+.title-input {
+  /* color: ghostwhite; */
+  color: rgb(248, 248, 255);
+  /* color: hsl(200, 30%, 20%); */
+  margin: 8px 0px 0px 70px;
+  line-height: 22px;
+  font-size: 17px;
+  position: absolute;
+}
+.label-check {
+  cursor: pointer;
+}
+.inp-check {
+  display: none;
+}
+.inp-check:checked + .span-check {
+  background-color: green;
+}
+.span-check {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background: white;
+  box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.07);
+  border-radius: 6px;
+}
+.icon-check {
+  display: flex;
+  position: absolute;
+  margin: 0px;
+  opacity: 0;
+}
+.inp-check:checked + .icon-check {
+  opacity: 1;
+  display: flex;
+  position: absolute;
+  margin: 8px 0px 0px 7px;
+}
+
+.label-all {
+  margin-left: 10px;
+  padding-right: 20px;
+  padding-top: 15px;
+}
+.select-1 {
+  background: #3389c2;
+  border-radius: 5px;
+  height: 20px;
+}
+
+.select-1 .select-option {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 10px;
+  font-style: italic;
+  background: #222222;
+  color: #b6b6b6;
+}
+
+.right-div-column-select {
+  margin: 50px 0px;
+  padding: 5px 0 !important;
+  width: 330px !important;
+  justify-content: space-around;
+  display: flex;
+  background-color: #222222;
+  align-items: center;
+}
+
+.right-div-column-select p {
+  color: #fff;
+  font-style: italic;
+  padding: 10px;
+}
+#check-processorFamily {
+  display: none;
+}
+#check-numberOfCores {
+  display: none;
+}

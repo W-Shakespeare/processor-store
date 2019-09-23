@@ -1,0 +1,66 @@
+.paige-item-l1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* background-color: gray; */
+  width: 100%px;
+  min-height: 700px;
+}
+
+.paige-item-l2 {
+  perspective: 500px;
+  transform-style: preserve-3d;
+  background: linear-gradient(37deg, gray, gray, rgba(0, 183, 255, 0.137));
+  width: 100%;
+  min-height: 700px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 50px 640px 575px 375px;
+  grid-template-areas:
+    "paige-item-div-p paige-item-div-p"
+    "paige-item-div-src paige-item-div-src "
+    "paige-item-div-description paige-item-div-description"
+    "paige-item-div-btn paige-item-div-btn";
+}
+.paige-item-div-p {
+  grid-area: paige-item-div-p;
+}
+.paige-item-div-src {
+  grid-area: paige-item-div-src;
+  justify-self: center;
+  align-self: center;
+}
+.paige-item-div-description {
+  grid-area: paige-item-div-description;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+.paige-item-div-btn {
+  grid-area: paige-item-div-btn;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.descrip-item:hover {
+  cursor: context-menu;
+  transform: scale(1.2);
+  /* transform: scale(1.2); */
+  color: blue;
+  transition: color 2s, transform 2s;
+}
+.descrip-item {
+  display: flex;
+  justify-content: space-between;
+  transform: scale(1);
+  color: black;
+  transition: color 2s, transform 2s;
+}
+.paige-item-img {
+  width: 500px;
+}
+
+.des {
+  width: 520px;
+  display: flex;
+
+  flex-direction: column;
+}
