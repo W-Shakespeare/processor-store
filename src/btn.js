@@ -5,11 +5,10 @@ function Btn(props) {
     <div className="Btn">
       <button
         name={props.name}
-        onClick={props.ShoppingСart}
+        onClick={props.onClick}
         className={props.className}
       >
-        {" "}
-        {props.children}{" "}
+        {props.children}
       </button>
     </div>
   );

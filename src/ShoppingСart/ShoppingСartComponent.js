@@ -76,7 +76,7 @@ function ShoppingСartComponent({ shoppingСart, shoppingСartDelete }) {
                 <div className="oneProcessor-price">
                   <p>{p.price}</p>
                   <Btn
-                    ShoppingСart={shoppingСartDelete}
+                    onClick={shoppingСartDelete}
                     className="btn btn-s-default"
                     name={p.id}
                   >

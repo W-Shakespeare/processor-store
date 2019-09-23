@@ -4,48 +4,62 @@ import {
   SHOPPING_CART,
   SHOPPING_CART_LENGTH,
   ADD_ID_ARR,
-  FILTER_ITEMS
+  FILTER_ITEMS,
+  ADD_TO_CART,
+  REMOVE_FROM_CART
 } from "./../types/types";
 import procesor from "../../processor";
 const result = {
   allProcessorItem: procesor,
   arrProcessorItem: [],
   filterItems: {},
-  shoppingСart: [],
+  shoppingСart: [] /**
+  [ {
+    id: Number,
+    amount: Number
+  } ]
+  */,
   shoppingСartLength: [],
   addIdArr: []
 };
 
 function addresult(state = result, action) {
-  if (action.type == FILTER_ITEMS) {
-    return Object.assign({}, state, { filterItems: action.payload });
+  switch (action.type) {
+    case FILTER_ITEMS:
+      return { ...state, filterItems: action.payload };
+    case ALL_PROCESSOR_ITEM:
+      return { ...state, allProcessorItem: action.payload };
+    case ADD_RESULT:
+      return { ...state, arrProcessorItem: action.payload };
+    case SHOPPING_CART:
+      return { ...state, shoppingСart: action.payload };
+    case SHOPPING_CART_LENGTH:
+      return { ...state, shoppingСartLength: action.payload };
+    case ADD_ID_ARR:
+      return { ...state, addIdArr: action.payload };
+    case REMOVE_FROM_CART:
+      return {
+        ...state,
+        shoppingСart: removeFromCart(state.shoppingСart, action.payload)
+      };
+    case ADD_TO_CART:
+      return {
+        ...state,
+        shoppingСart: addToCart(state.shoppingСart, action.payload)
+      };
+    default:
+      return state;
   }
-  if (action.type == ALL_PROCESSOR_ITEM) {
-    return Object.assign({}, state, { allProcessorItem: action.payload });
-  }
-  if (action.type == ADD_RESULT) {
-    return Object.assign({}, state, { arrProcessorItem: action.payload });
-  }
-  if (action.type == SHOPPING_CART) {
-    return Object.assign({}, state, { shoppingСart: action.payload });
-  }
-  if (action.type == SHOPPING_CART_LENGTH) {
-    return Object.assign({}, state, { shoppingСartLength: action.payload });
-  }
-  if (action.type == ADD_ID_ARR) {
-    return Object.assign({}, state, { addIdArr: action.payload });
-  }
-  return state;
 }
+
 export default addresult;
 
-/*
-arrProcessorItem: {
-    yadro: { 2: true, 4: true, 6: true, 8: true },
-    classs: { AMD: true, Intel: true },
-    processorFamily: {
-      "Intel Core i9": true,
-      "Intel Core i5": true,
-      "Intel Core i3": true
-    }
-*/
+function removeFromCart(arr, payload) {
+  return arr.filter(i => i.id != payload);
+}
+
+function addToCart(arr, payload) {
+  if (arr.some(el => el.id == payload)) return arr;
+
+  return [...arr, { id: payload, amount: 1 }];
+}

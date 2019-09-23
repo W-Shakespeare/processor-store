@@ -113,10 +113,6 @@ class ContainerContentSwitch extends React.Component {
     console.log(arr);
   };
   algorithm = (props, event) => {
-    debugger;
-    let now = new Date();
-    console.log("alg " + now.getMinutes() + " " + now.getSeconds());
-
     /*
     let processorArr = createArr("processor");
     let processorFamilyArr = createArr("processorFamily");

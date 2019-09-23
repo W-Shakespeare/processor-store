@@ -2,12 +2,6 @@ import store from "../store/index";
 import { filterItems } from "../Home/duck/actions/actions";
 ///*
 
-window.onload = () => {
-  let allInput = document.getElementById("swi");
-  allInput.addEventListener("click", dispatch);
-  console.log(allInput);
-};
-
 function dispatch(event) {
   event.preventDefault();
   console.dir(event.target.parentNode.attributes.value.value);

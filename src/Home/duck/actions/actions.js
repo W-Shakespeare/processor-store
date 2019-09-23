@@ -4,8 +4,24 @@ import {
   SHOPPING_CART,
   SHOPPING_CART_LENGTH,
   ADD_ID_ARR,
-  FILTER_ITEMS
+  FILTER_ITEMS,
+  ADD_TO_CART,
+  REMOVE_FROM_CART
 } from "../types/types";
+
+function removeFromCart(id) {
+  return {
+    type: REMOVE_FROM_CART,
+    payload: id
+  };
+}
+
+function addToCart(id) {
+  return {
+    type: ADD_TO_CART,
+    payload: id
+  };
+}
 
 function allProcessorItem(i) {
   return {
@@ -49,5 +65,7 @@ export {
   shoppingСart,
   shoppingСartLength,
   allProcessorItem,
-  filterItems
+  filterItems,
+  addToCart,
+  removeFromCart
 };
