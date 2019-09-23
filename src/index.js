@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import store from "./store/index";
 import Home from "./Home/Home";
 import PageItemContainer from "./PageItem/pageItemContainer";
-import ShoppingСartContainer from "./ShoppingСart/ShoppingСartContainer";
+import ShoppingCartContainer from "./ShoppingCart/ShoppingCartContainer";
 //import "./css/css-reset.css";
 import "./css/header.css";
 import "./css/main.css";
@@ -21,7 +21,7 @@ function Root() {
           <Route exact path="/" component={Home} />
           <Route
             path="/ShoppingСart/ShoppingСartContainer"
-            component={ShoppingСartContainer}
+            component={ShoppingCartContainer}
           />
           <Route
             path="/PageItem/pageItemContainer/:productid"
