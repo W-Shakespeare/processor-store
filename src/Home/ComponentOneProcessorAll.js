@@ -5,7 +5,6 @@ import OneProcessor from "./OneProcessor";
 function ComponentOneProcessorAll({ result, ShoppingСart, res }) {
   console.log(result);
   console.log(res);
-  console.log(1111111111111111);
   return (
     <div className="oneProcessor-all">
       {result.map((item, i) => {

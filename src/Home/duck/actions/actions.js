@@ -53,10 +53,10 @@ function addIdArr(i) {
     payload: i
   };
 }
-function filterItems(i) {
+function filterItems(Checked) {
   return {
     type: FILTER_ITEMS,
-    payload: i
+    payload: Checked
   };
 }
 

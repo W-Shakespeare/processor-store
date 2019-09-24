@@ -9,10 +9,21 @@ import {
   REMOVE_FROM_CART
 } from "./../types/types";
 import procesor from "../../processor";
+
+const obj = {};
+
 const result = {
   allProcessorItem: procesor,
   arrProcessorItem: [],
-  filterItems: {},
+  filterItems: {
+    yadro: { 2: false, 4: false, 6: false, 8: false },
+    classs: { Intel: false, AMD: false },
+    processorFamily: {
+      "Intel Core i3": false,
+      "Intel Core i5": false,
+      "Intel Core i7": false
+    }
+  },
   shoppingСart: [] /**
   [ {
     id: Number,
@@ -26,7 +37,10 @@ const result = {
 function addresult(state = result, action) {
   switch (action.type) {
     case FILTER_ITEMS:
-      return { ...state, filterItems: action.payload };
+      return {
+        ...state,
+        filterItems: filterItems(state.filterItems, action.payload)
+      };
     case ALL_PROCESSOR_ITEM:
       return { ...state, allProcessorItem: action.payload };
     case ADD_RESULT:
@@ -62,4 +76,17 @@ function addToCart(arr, payload) {
   if (arr.some(el => el.id == payload)) return arr;
 
   return [...arr, { id: payload, amount: 1 }];
+}
+
+function filterItems(obj, payload) {
+  for (let key in obj) {
+    if (payload in obj[key]) {
+      console.log("Here obj", obj[key]);
+      if (obj[key][payload] == false) {
+        return (obj = { ...obj, [key]: { ...obj[key], [payload]: true } });
+      } else {
+        return (obj = { ...obj, [key]: { ...obj[key], [payload]: false } });
+      }
+    }
+  }
 }
