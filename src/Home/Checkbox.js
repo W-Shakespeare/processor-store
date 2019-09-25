@@ -3,7 +3,12 @@ import { filterItems } from "./duck/actions/actions";
 import { connect } from "react-redux";
 
 class Checkbox extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
+    console.log("this props here", this.props);
+
     const { className, name } = this.props;
     return (
       <div className="column-div-inp-chk div-oth">
@@ -14,7 +19,7 @@ class Checkbox extends React.Component {
             type="checkbox"
             id={name}
             onClick={this.dispatchToRedux}
-            value={name}
+            checked={this.filterItemsShow()}
           />
           <svg
             className="icon-check"
@@ -38,10 +43,32 @@ class Checkbox extends React.Component {
     event.preventDefault();
     this.props.dispatch(filterItems(this.props.name));
   };
+  checkFilters(obj, lookForThisKey) {
+    let arrKeys = Object.keys(obj);
+    return arrKeys.some(i => i == lookForThisKey);
+  }
+
+  filterItemsShow = () => {
+    let objFromRedux = this.props.reduxState.filterItems;
+    const { name } = this.props;
+    let arr = Object.values(objFromRedux);
+    let result = arr.some(obj => {
+      if (this.checkFilters(obj, name)) {
+        return obj[name];
+      }
+    });
+    console.log("checkbox result", result);
+    return result;
+  };
 }
 
-//function Checkbox({ className, name, dispatch }) {}
+function mapStateToProps(state) {
+  return {
+    reduxState: state
+  };
+}
+
 export default connect(
-  null,
+  mapStateToProps,
   null
 )(Checkbox);

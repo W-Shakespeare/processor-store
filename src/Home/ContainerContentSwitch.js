@@ -113,58 +113,6 @@ class ContainerContentSwitch extends React.Component {
     console.log(arr);
   };
   algorithm = (props, event) => {
-    /*
-    let processorArr = createArr("processor");
-    let processorFamilyArr = createArr("processorFamily");
-    let yadroArr = createArr("yadro");
-
-    let processorArrCheck = filterCheck(processorArr);
-    let processorFamilyCheck = filterCheck(processorFamilyArr);
-    let yadroArrCheck = filterCheck(yadroArr);
-
-    function createArr(classNameItem) {
-      let inputItem = document.getElementsByClassName(classNameItem);
-      let arrItem = [];
-      for (let i = 0; i < inputItem.length; i++) {
-        let oneInpElement = inputItem[i];
-        let objectInp = {
-          checked: oneInpElement.checked,
-          value: oneInpElement.value
-        };
-        arrItem.push(objectInp);
-      }
-      return arrItem;
-    }
-    function filterCheck(arr) {
-      let checkedArr = arr
-        .filter(item => {
-          return item.checked == true;
-        })
-        .map(item => item.value);
-      console.log(checkedArr);
-      return checkedArr;
-    }
-
-    let yadro = ChangeArrToObj(yadroArrCheck);
-    let classs = ChangeArrToObj(processorArrCheck);
-    let processorFamily = ChangeArrToObj(processorFamilyCheck);
-
-    function ChangeArrToObj(arr) {
-      let item = arr.reduce((acc, next) => {
-        acc[next] = true;
-        return acc;
-      }, {});
-
-      return item;
-    }
-
-    const obj = {
-      yadro: yadro,
-      classs: classs,
-      processorFamily: processorFamily
-    };
-
-*/
     let obj = this.props.reduxState.filterItems;
     let processors = this.props.reduxState.allProcessorItem;
     console.log(processors);
