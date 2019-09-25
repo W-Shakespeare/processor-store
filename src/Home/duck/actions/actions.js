@@ -2,7 +2,6 @@ import {
   ALL_PROCESSOR_ITEM,
   ADD_RESULT,
   SHOPPING_CART,
-  SHOPPING_CART_LENGTH,
   ADD_ID_ARR,
   FILTER_ITEMS,
   ADD_TO_CART,
@@ -57,12 +56,7 @@ function shoppingСart(i) {
     payload: i
   };
 }
-function shoppingСartLength(i) {
-  return {
-    type: SHOPPING_CART_LENGTH,
-    payload: i
-  };
-}
+
 function addIdArr(i) {
   return {
     type: ADD_ID_ARR,
@@ -79,7 +73,6 @@ function filterItems(Checked) {
 export {
   addresult,
   shoppingСart,
-  shoppingСartLength,
   allProcessorItem,
   filterItems,
   addToCart,

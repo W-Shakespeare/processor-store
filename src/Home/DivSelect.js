@@ -1,6 +1,6 @@
 import React from "react";
 import Select from "./Select";
-function DivSelect({ selectCheck }) {
+function DivSelect() {
   return (
     <div className="right-div-column-select">
       <p className="p-select">Сортировка</p>

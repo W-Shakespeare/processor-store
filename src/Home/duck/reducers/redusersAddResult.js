@@ -2,7 +2,6 @@ import {
   ALL_PROCESSOR_ITEM,
   ADD_RESULT,
   SHOPPING_CART,
-  SHOPPING_CART_LENGTH,
   ADD_ID_ARR,
   FILTER_ITEMS,
   ADD_TO_CART,
@@ -26,9 +25,27 @@ const result = {
     }
   },
   selectItems: [
-    { boolean: true, value: "--" },
-    { boolean: false, value: "От дорогого к дешевому" },
-    { boolean: false, value: "От дешевого к дорогому" }
+    {
+      boolean: true,
+      value: "--",
+      sort(arr) {
+        return arr;
+      }
+    },
+    {
+      boolean: false,
+      value: "От дорогого к дешевому",
+      sort(arr) {
+        return arr.sort((a, b) => b.price2 - a.price2);
+      }
+    },
+    {
+      boolean: false,
+      value: "От дешевого к дорогому",
+      sort(arr) {
+        return arr.sort((a, b) => a.price2 - b.price2);
+      }
+    }
   ],
   inputSearchText: [{ value: "" }],
   shoppingСart: [] /**
@@ -37,7 +54,6 @@ const result = {
     amount: Number
   } ]
   */,
-  shoppingСartLength: [],
   addIdArr: []
 };
 
@@ -54,8 +70,6 @@ function addresult(state = result, action) {
       return { ...state, arrProcessorItem: action.payload };
     case SHOPPING_CART:
       return { ...state, shoppingСart: action.payload };
-    case SHOPPING_CART_LENGTH:
-      return { ...state, shoppingСartLength: action.payload };
     case ADD_ID_ARR:
       return { ...state, addIdArr: action.payload };
     case REMOVE_FROM_CART:
@@ -112,12 +126,14 @@ function changedSelectBoolean(arr, string) {
     if (obj["value"] == string) {
       return {
         ["boolean"]: true,
-        ["value"]: obj["value"]
+        ["value"]: obj["value"],
+        ["sort"]: obj["sort"]
       };
     } else {
       return {
         ["boolean"]: false,
-        ["value"]: obj["value"]
+        ["value"]: obj["value"],
+        ["sort"]: obj["sort"]
       };
     }
   });

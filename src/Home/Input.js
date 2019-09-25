@@ -25,4 +25,3 @@ export default Input = connect(
   mapStateToProps,
   null
 )(Input);
-//console.log("changedInputSearch".toUpperCase())

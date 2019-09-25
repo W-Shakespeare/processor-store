@@ -2,7 +2,7 @@ import React from "react";
 import Input from "./Input";
 import Label from "./Label";
 
-function ComponentSearch({ inpSearch }) {
+function Search() {
   return (
     <div className="search">
       <Input type="text" className="inp inp-left-icon inpSearch" />
@@ -11,4 +11,4 @@ function ComponentSearch({ inpSearch }) {
   );
 }
 
-export default ComponentSearch;
+export default Search;
