@@ -8,7 +8,7 @@ class ContainerOneProcessorAll extends React.Component {
     super(props);
   }
   render() {
-    console.log("what is State", this.props.reduxState);
+    console.log("This is State", this.props.reduxState);
     return (
       <ComponentOneProcessorAll
         res={this.props.reduxState.filterItems}
@@ -24,6 +24,38 @@ class ContainerOneProcessorAll extends React.Component {
   scrollTo() {
     window.scrollTo(0, 0);
   }
+}
+
+function inputSearchText(arr, state) {
+  let inputSearchText = state.inputSearchText[0]["value"];
+  let reg = new RegExp(inputSearchText, "i");
+  //  debugger;
+  let result = arr.reduce((acc, next) => {
+    for (let key in next) {
+      if (reg.test(next[key]) && key != "src") {
+        acc.push(next);
+        return acc;
+      }
+    }
+    return acc;
+  }, []);
+  return result;
+  return inputSearchText === ""
+    ? arr
+    : arr.filter(obj => {
+        for (let key in obj) {
+          return reg.test(obj[key]) ? true : false;
+        }
+      });
+}
+
+function selectCheck(arr, state) {
+  let arrAllProcessorItem = [...arr];
+  let arrSelectItems = state.selectItems;
+  console.log("this obj......", arrSelectItems);
+  return arrSelectItems
+    .filter(obj => obj["boolean"] == true)[0]
+    ["sort"](arrAllProcessorItem);
 }
 
 function algorithm(state) {
@@ -51,7 +83,7 @@ function algorithm(state) {
 
 function mapStateToProps(state) {
   return {
-    reduxState: algorithm(state)
+    reduxState: inputSearchText(selectCheck(algorithm(state), state), state)
   };
 }
 
@@ -59,3 +91,11 @@ export default connect(
   mapStateToProps,
   null
 )(ContainerOneProcessorAll);
+
+function k(i) {
+  let inputSearchText = i;
+  let reg = new RegExp(inputSearchText, "i");
+
+  console.log(reg.test("liki"));
+}
+k("ki");

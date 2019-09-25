@@ -1,26 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
 import ShoppingCartComponent from "./ShoppingCartComponent";
-class ShoppingCartContainer extends React.Component {
-  render() {
-    console.log(this.props);
-
-    return (
-      <ShoppingCartComponent
-        shoppingСart={this.props.shoppingСart}
-        //shoppingСartDelete={this.shoppingСartDelete}
-      />
-    );
-  }
-
-  shoppingСartDelete = (event, props) => {
-    this.props.removeFromCart(this.props);
-  };
+function ShoppingCartContainer(props) {
+  console.log(props);
+  return <ShoppingCartComponent shoppingСart={props.shoppingСart} />;
+}
+function getShoppingCartArr(arr, state) {
+  return arr.filter(obj => state.shoppingСart.some(obj2 => obj.id == obj2.id));
 }
 
 function mapStateToProps(state) {
   return {
-    shoppingСart: state.shoppingСart
+    shoppingСart: getShoppingCartArr(state.allProcessorItem, state)
   };
 }
 
