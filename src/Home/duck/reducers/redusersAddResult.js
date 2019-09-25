@@ -7,7 +7,8 @@ import {
   FILTER_ITEMS,
   ADD_TO_CART,
   REMOVE_FROM_CART,
-  CHANGED_SELECT_BOOLEAN
+  CHANGED_SELECT_BOOLEAN,
+  CHANGED_INPUT_SEARCH
 } from "./../types/types";
 import procesor from "../../processor";
 
@@ -29,7 +30,7 @@ const result = {
     { boolean: false, value: "От дорогого к дешевому" },
     { boolean: false, value: "От дешевого к дорогому" }
   ],
-
+  inputSearchText: [{ value: "" }],
   shoppingСart: [] /**
   [ {
     id: Number,
@@ -72,11 +73,15 @@ function addresult(state = result, action) {
         ...state,
         selectItems: changedSelectBoolean(state.selectItems, action.payload)
       };
+    case CHANGED_INPUT_SEARCH:
+      return {
+        ...state,
+        inputSearchText: [{ value: action.payload }]
+      };
     default:
       return state;
   }
 }
-
 export default addresult;
 
 function removeFromCart(arr, payload) {

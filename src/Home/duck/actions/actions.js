@@ -7,8 +7,16 @@ import {
   FILTER_ITEMS,
   ADD_TO_CART,
   REMOVE_FROM_CART,
-  CHANGED_SELECT_BOOLEAN
+  CHANGED_SELECT_BOOLEAN,
+  CHANGED_INPUT_SEARCH
 } from "../types/types";
+
+function changedInputSearch(string) {
+  return {
+    type: CHANGED_INPUT_SEARCH,
+    payload: string
+  };
+}
 
 function changedSelectBoolean(string) {
   return {
@@ -76,5 +84,6 @@ export {
   filterItems,
   addToCart,
   removeFromCart,
-  changedSelectBoolean
+  changedSelectBoolean,
+  changedInputSearch
 };

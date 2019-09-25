@@ -1,9 +1,28 @@
 import React from "react";
-
-function Input({ type, className, id, inpSearch }) {
+import { connect } from "react-redux";
+import { changedInputSearch } from "./duck/actions/actions";
+function Input({ type, className, id, dispatch, reduxState }) {
   return (
-    <input type={type} className={className} id={id} onChange={inpSearch} />
+    <input
+      type={type}
+      className={className}
+      id={id}
+      onChange={e => {
+        e.preventDefault();
+        dispatch(changedInputSearch(e.target.value));
+      }}
+      value={reduxState}
+    />
   );
 }
 
-export default Input;
+function mapStateToProps(state) {
+  return {
+    reduxState: state.inputSearchText[0].value
+  };
+}
+export default Input = connect(
+  mapStateToProps,
+  null
+)(Input);
+//console.log("changedInputSearch".toUpperCase())

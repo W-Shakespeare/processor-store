@@ -8,7 +8,6 @@ function Select({ className, dispatch, reduxState }) {
       className={className}
       onChange={event => {
         event.preventDefault();
-        console.log(event.target.value);
         dispatch(changedSelectBoolean(event.target.value));
       }}
     >
