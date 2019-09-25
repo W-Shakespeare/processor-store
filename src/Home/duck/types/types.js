@@ -6,3 +6,4 @@ export const ADD_ID_ARR = "ADD_ID_ARR";
 export const FILTER_ITEMS = "FILTER_ITEMS";
 export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
+export const CHANGED_SELECT_BOOLEAN = "CHANGED_SELECT_BOOLEAN";

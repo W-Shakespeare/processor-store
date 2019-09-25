@@ -46,7 +46,6 @@ function algorithm(state) {
     return acc;
   }, processors);
   console.log(result);
-  //this.props.result(result);
   return result;
 }
 

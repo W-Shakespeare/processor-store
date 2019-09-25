@@ -56,7 +56,10 @@ function ShoppingСartComponent({ shoppingСart, dispatch, shoppingСartDelete }
                 <div className="oneProcessor-price">
                   <p>{p.price}</p>
                   <Btn
-                    onClick={i => dispatch(removeFromCart(p.id))}
+                    pId={p.id}
+                    onClick={i => {
+                      dispatch(removeFromCart(p.id));
+                    }}
                     className="btn btn-s-default"
                     name={p.id}
                   >

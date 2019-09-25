@@ -6,8 +6,16 @@ import {
   ADD_ID_ARR,
   FILTER_ITEMS,
   ADD_TO_CART,
-  REMOVE_FROM_CART
+  REMOVE_FROM_CART,
+  CHANGED_SELECT_BOOLEAN
 } from "../types/types";
+
+function changedSelectBoolean(string) {
+  return {
+    type: CHANGED_SELECT_BOOLEAN,
+    payload: string
+  };
+}
 
 function removeFromCart(id) {
   return {
@@ -67,5 +75,6 @@ export {
   allProcessorItem,
   filterItems,
   addToCart,
-  removeFromCart
+  removeFromCart,
+  changedSelectBoolean
 };

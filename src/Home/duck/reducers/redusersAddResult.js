@@ -6,11 +6,10 @@ import {
   ADD_ID_ARR,
   FILTER_ITEMS,
   ADD_TO_CART,
-  REMOVE_FROM_CART
+  REMOVE_FROM_CART,
+  CHANGED_SELECT_BOOLEAN
 } from "./../types/types";
 import procesor from "../../processor";
-
-const obj = {};
 
 const result = {
   allProcessorItem: procesor,
@@ -21,9 +20,16 @@ const result = {
     processorFamily: {
       "Intel Core i3": false,
       "Intel Core i5": false,
-      "Intel Core i7": false
+      "Intel Core i7": false,
+      "Intel Core i9": false
     }
   },
+  selectItems: [
+    { boolean: true, value: "--" },
+    { boolean: false, value: "От дорогого к дешевому" },
+    { boolean: false, value: "От дешевого к дорогому" }
+  ],
+
   shoppingСart: [] /**
   [ {
     id: Number,
@@ -61,6 +67,11 @@ function addresult(state = result, action) {
         ...state,
         shoppingСart: addToCart(state.shoppingСart, action.payload)
       };
+    case CHANGED_SELECT_BOOLEAN:
+      return {
+        ...state,
+        selectItems: changedSelectBoolean(state.selectItems, action.payload)
+      };
     default:
       return state;
   }
@@ -89,4 +100,20 @@ function filterItems(obj, payload) {
       }
     }
   }
+}
+
+function changedSelectBoolean(arr, string) {
+  return arr.map(obj => {
+    if (obj["value"] == string) {
+      return {
+        ["boolean"]: true,
+        ["value"]: obj["value"]
+      };
+    } else {
+      return {
+        ["boolean"]: false,
+        ["value"]: obj["value"]
+      };
+    }
+  });
 }
