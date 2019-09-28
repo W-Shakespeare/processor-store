@@ -1,10 +1,10 @@
 import React from "react";
-import ContainerContentSwitch from "./ContainerContentSwitch";
+import ContentSwitch from "./ContentSwitch";
 
 function Filters() {
   return (
     <section className="filters">
-      <ContainerContentSwitch />
+      <ContentSwitch />
     </section>
   );
 }

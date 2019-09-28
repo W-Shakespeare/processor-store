@@ -1,11 +1,11 @@
 import React from "react";
-import ContainerSearch from "./ContainerSearch";
+import Search from "./Search";
 import Nav from "./Nav";
 
 function Other() {
   return (
     <div className="other">
-      <ContainerSearch />
+      <Search />
       <Nav />
     </div>
   );

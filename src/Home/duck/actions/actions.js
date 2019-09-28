@@ -2,12 +2,27 @@ import {
   ALL_PROCESSOR_ITEM,
   ADD_RESULT,
   SHOPPING_CART,
-  SHOPPING_CART_LENGTH,
   ADD_ID_ARR,
   FILTER_ITEMS,
   ADD_TO_CART,
-  REMOVE_FROM_CART
+  REMOVE_FROM_CART,
+  CHANGED_SELECT_BOOLEAN,
+  CHANGED_INPUT_SEARCH
 } from "../types/types";
+
+function changedInputSearch(string) {
+  return {
+    type: CHANGED_INPUT_SEARCH,
+    payload: string
+  };
+}
+
+function changedSelectBoolean(string) {
+  return {
+    type: CHANGED_SELECT_BOOLEAN,
+    payload: string
+  };
+}
 
 function removeFromCart(id) {
   return {
@@ -41,31 +56,27 @@ function shoppingСart(i) {
     payload: i
   };
 }
-function shoppingСartLength(i) {
-  return {
-    type: SHOPPING_CART_LENGTH,
-    payload: i
-  };
-}
+
 function addIdArr(i) {
   return {
     type: ADD_ID_ARR,
     payload: i
   };
 }
-function filterItems(i) {
+function filterItems(Checked) {
   return {
     type: FILTER_ITEMS,
-    payload: i
+    payload: Checked
   };
 }
 
 export {
   addresult,
   shoppingСart,
-  shoppingСartLength,
   allProcessorItem,
   filterItems,
   addToCart,
-  removeFromCart
+  removeFromCart,
+  changedSelectBoolean,
+  changedInputSearch
 };

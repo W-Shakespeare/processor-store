@@ -1,7 +1,8 @@
+/*
 import store from "../store/index";
 import { filterItems } from "../Home/duck/actions/actions";
 ///*
-
+/
 function dispatch(event) {
   event.preventDefault();
   console.dir(event.target.parentNode.attributes.value.value);

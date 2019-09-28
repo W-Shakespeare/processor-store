@@ -1,15 +1,13 @@
 import React from "react";
-//import Menu from "../Start/menu";
+import Nav from "../Home/Nav";
 import { connect } from "react-redux";
 import { removeFromCart } from "../Home/duck/actions/actions";
-
 import Btn from "../btn";
 
 function ShoppingСartComponent({ shoppingСart, dispatch, shoppingСartDelete }) {
-  //console.log(this.props);
-  console.log(shoppingСart);
   return (
     <div>
+      <Nav />
       <div className="oneProcessor-all">
         {shoppingСart.map((p, i) => {
           if (p.id == 0) {
@@ -27,7 +25,6 @@ function ShoppingСartComponent({ shoppingСart, dispatch, shoppingСartDelete }
                   <img
                     className="img-oneProcessor"
                     name={p.name}
-                    //className={imgC}
                     src={p.src}
                     width="300"
                     height="300"
@@ -56,7 +53,10 @@ function ShoppingСartComponent({ shoppingСart, dispatch, shoppingСartDelete }
                 <div className="oneProcessor-price">
                   <p>{p.price}</p>
                   <Btn
-                    onClick={i => dispatch(removeFromCart(p.id))}
+                    pId={p.id}
+                    onClick={i => {
+                      dispatch(removeFromCart(p.id));
+                    }}
                     className="btn btn-s-default"
                     name={p.id}
                   >

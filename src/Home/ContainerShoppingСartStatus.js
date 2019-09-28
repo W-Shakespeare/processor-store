@@ -1,5 +1,4 @@
 import React from "react";
-import { shoppingСartLength } from "./duck/actions/actions";
 import { connect } from "react-redux";
 
 class ContainerShoppingСartStatus extends React.Component {
@@ -17,5 +16,3 @@ export default connect(
   mapStateToProps,
   null
 )(ContainerShoppingСartStatus);
-
-//export default ContainerShoppingСartStatus;
