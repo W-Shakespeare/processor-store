@@ -1,42 +1,10 @@
 import React from "react";
-//import ProcessorDiv from './processorDiv';
 import Btn from "./../btn";
-//import processor from "./processor";
-// import PageItemContainer from "./pageItemContainer";
-//import "./item.css";
-//import {
-// shoppingСart,
-//shoppingСartLength
-//} from "../ProcessorDiv/duck/actions/actions";
+import { addToCart } from "../Home/duck/actions/actions";
+import { connect } from "react-redux";
 
-function s() {
-  /*
-  fetch("http://localhost:3000/arr", {
-    method: "GET"
-  })
-    .then(r => r.json())
-    .then(res => console.log(res));
-*/
-}
-/*
-function ShoppingСart() {
-  fetch("http://localhost:3000/arr", {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json"
-    },
-    body: JSON.stringify({
-      id: "d"
-    })
-  });
-  //.then(r => r.json())
-}
-*/
-
-function PageItemComponent({ result, ShoppingСart }) {
+function PageItemComponent({ result, dispatch }) {
   //console.log(props.location.state.itemLink)
-  console.log(result);
-  //var {idArr} =props
   return (
     <div className="paige-item-l1">
       {result.map((item, i) => {
@@ -102,11 +70,9 @@ function PageItemComponent({ result, ShoppingСart }) {
               </div>
             </div>
             <div key={13} className="paige-item-div-btn">
-              <Btn ShoppingСart={s} className="btn btn-s-default">
-                Купить{" "}
-              </Btn>
+              <Btn className="btn btn-s-default">Купить </Btn>
               <Btn
-                ShoppingСart={ShoppingСart}
+                onClick={() => dispatch(addToCart(item.id))}
                 className="btn btn-s-ghost"
                 name={item.id}
               >
@@ -120,4 +86,7 @@ function PageItemComponent({ result, ShoppingСart }) {
   );
 }
 
-export default PageItemComponent;
+export default connect(
+  null,
+  null
+)(PageItemComponent);

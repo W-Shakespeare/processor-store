@@ -1,7 +1,6 @@
 import React from "react";
 import { filterItems } from "./duck/actions/actions";
 import { connect } from "react-redux";
-
 class Checkbox extends React.Component {
   constructor(props) {
     super(props);

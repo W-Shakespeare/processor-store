@@ -12,7 +12,6 @@ import "./css/main.css";
 import "./css/main-content.css";
 import "./css/Paige-item.css";
 import "./css/media.css";
-import ind from "./untils/dispatch";
 function Root() {
   return (
     <div id="root">
